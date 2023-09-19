@@ -1,0 +1,37 @@
+[
+  {
+    "day": "mon",
+    "amount": 17.45,
+    "height": 57
+  },
+  {
+    "day": "tue",
+    "amount": 34.91,
+    "height": 134
+  },
+  {
+    "day": "wed",
+    "amount": 52.36,
+    "height": 170
+  },
+  {
+    "day": "thu",
+    "amount": 31.07,
+    "height": 100
+  },
+  {
+    "day": "fri",
+    "amount": 23.39,
+    "height": 63
+  },
+  {
+    "day": "sat",
+    "amount": 43.28,
+    "height": 100
+  },
+  {
+    "day": "sun",
+    "amount": 25.48,
+    "height": 65
+  }
+]
