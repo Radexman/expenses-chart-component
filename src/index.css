@@ -20,5 +20,5 @@
 }
 
 .chart-bar {
-  @apply tooltip w-8 cursor-pointer rounded-sm transition-all hover:opacity-80 md:w-14;
+  @apply tooltip w-8 cursor-pointer rounded-sm transition-all hover:opacity-80 md:w-14 md:rounded-md;
 }
