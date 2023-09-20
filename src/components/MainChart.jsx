@@ -1,4 +1,5 @@
-import BarChart from "./BarChart";
+import PropTypes from 'prop-types';
+import BarChart from './BarChart';
 
 const MainChart = ({ statistics }) => {
   return (
@@ -6,6 +7,10 @@ const MainChart = ({ statistics }) => {
       <BarChart statistics={statistics} />
     </main>
   );
+};
+
+MainChart.propTypes = {
+  statistics: PropTypes.array.isRequired,
 };
 
 export default MainChart;

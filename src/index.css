@@ -1,4 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Space+Grotesk:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Space+Grotesk:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-wrapper {
+  @apply flex min-h-screen items-center justify-center bg-neutral-veryPaleOrange;
+}
+
+.header {
+  @apply flex items-center justify-between rounded-xl bg-primary-softRed p-6 text-neutral-veryPaleOrange shadow-lg;
+}
+
+.circle-one {
+  @apply absolute right-5 h-10 w-10 rounded-full border-2 border-neutral-veryPaleOrange;
+}
+
+.circle-two {
+  @apply h-10 w-10 rounded-full bg-neutral-darkBrown;
+}
+
+.chart-bar {
+  @apply tooltip w-8 cursor-pointer rounded-sm transition-all hover:opacity-80 md:w-14;
+}

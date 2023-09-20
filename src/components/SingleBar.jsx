@@ -6,7 +6,7 @@ const SingleBar = ({ stat, today }) => {
   return (
     <div>
       <div
-        className="tooltip w-8 cursor-pointer rounded-sm md:w-14"
+        className="chart-bar"
         style={{
           height: height,
           backgroundColor:

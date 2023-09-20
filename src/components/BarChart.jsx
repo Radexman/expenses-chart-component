@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SingleBar from './SingleBar';
 
 const BarChart = ({ statistics }) => {
@@ -23,6 +24,17 @@ const BarChart = ({ statistics }) => {
       </div>
     </div>
   );
+};
+
+BarChart.propTypes = {
+  statistics: PropTypes.arrayOf(
+    PropTypes.shape({
+      dayName: PropTypes.string.isRequired,
+      day: PropTypes.number.isRequired,
+      amount: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+  ),
 };
 
 export default BarChart;
