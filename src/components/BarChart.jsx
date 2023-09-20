@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import SingleBar from './SingleBar';
+import { DataContext } from '../context/DataContext';
 
-const BarChart = ({ statistics }) => {
+const BarChart = () => {
   const [today, setToday] = useState();
+
+  const { statistics } = useContext(DataContext);
 
   useEffect(() => {
     setCurrentDate();
