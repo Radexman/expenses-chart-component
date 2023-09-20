@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from 'react';
-import PropTypes from 'prop-types';
 import SingleBar from './SingleBar';
 import { DataContext } from '../context/DataContext';
 
@@ -17,6 +16,17 @@ const BarChart = () => {
     setToday(today);
   };
 
+  if (!statistics && statistics.length === 0) {
+    return (
+      <div>
+        <h2 className="text-2xl font-bold text-neutral-darkBrown">Sorry!</h2>
+        <h3 className="text-xl font-bold text-neutral-darkBrown">
+          No data to display
+        </h3>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-bold">Spending - Last 7 days</h1>
@@ -27,17 +37,6 @@ const BarChart = () => {
       </div>
     </div>
   );
-};
-
-BarChart.propTypes = {
-  statistics: PropTypes.arrayOf(
-    PropTypes.shape({
-      dayName: PropTypes.string.isRequired,
-      day: PropTypes.number.isRequired,
-      amount: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-  ),
 };
 
 export default BarChart;

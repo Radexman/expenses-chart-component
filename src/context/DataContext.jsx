@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import data from '../chart-data.json';
 
 export const DataContext = createContext();
 
@@ -8,8 +7,15 @@ const DataProvider = ({ children }) => {
   const [statistics, setStatistics] = useState([]);
 
   useEffect(() => {
-    setStatistics(data);
+    fetchData();
   }, []);
+
+  const fetchData = async () => {
+    const response = await fetch('http://localhost:3000/data');
+    const data = await response.json();
+
+    setStatistics(data);
+  };
 
   return (
     <DataContext.Provider value={{ statistics }}>
