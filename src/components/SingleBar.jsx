@@ -14,7 +14,7 @@ const SingleBar = ({ stat, today }) => {
         }}
         data-tip={`$${amount}`}
       ></div>
-      <p className="text-center text-primary-cyan">{dayName}</p>
+      <p className="text-primary text-center">{dayName}</p>
     </div>
   );
 };
