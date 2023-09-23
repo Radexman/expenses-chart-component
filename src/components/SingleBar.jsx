@@ -10,7 +10,7 @@ const SingleBar = ({ stat, today }) => {
         style={{
           height: height,
           backgroundColor:
-            today === day ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)',
+            today === day ? 'hsl(186, 34%, 60%)' : 'hsl(50, 79%, 65%)',
         }}
         data-tip={`$${amount}`}
       ></div>
